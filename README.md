@@ -1,79 +1,79 @@
-# TEFA RPL — LSP P1 
+# TEFA RPL — LSP P1
 
-Website LSP P1  yang menyediakan informasi seputar sertifikasi kompetensi dari berbagai jurusan. Proyek ini juga dilengkapi dashboard khusus TEFA RPL untuk membantu pengelolaan keuangan secara digital.
-
----
-
-## Tentang Proyek
-
-Proyek ini memiliki dua bagian utama:
-
-**1. Website LSP P1**
-
-Menyediakan informasi seputar LSP P1 SMKN 1 Banjar, mulai dari profil lembaga, visi dan misi, kebijakan mutu, hingga informasi 7 skema sertifikasi kompetensi dari jurusan Pemasaran, Akuntansi, DKV, Tata Busana, MPLB, PPLG, dan Broadcasting. Tersedia juga informasi kontak, lokasi, dan panduan sertifikasi.
-
-**2. Dashboard TEFA RPL**
-
-Dashboard internal yang digunakan khusus untuk pengelolaan keuangan Teaching Factory (TEFA) jurusan Rekayasa Perangkat Lunak (RPL). Dashboard ini memiliki dua peran pengguna, yaitu Admin dan Bendahara, dengan fitur pengelolaan data keuangan serta pembaruan data secara real-time.
+The official LSP P1 website provides information about competency certification across multiple departments at SMKN 1 Banjar. The project also includes a dedicated dashboard for TEFA RPL to support digital financial management.
 
 ---
 
-## Fitur Utama
+## About the Project
+
+This project consists of two main parts:
+
+**1. LSP P1 Website**
+
+Provides information about LSP P1 SMKN 1 Banjar, including the institution's profile, vision and mission, quality policy, and details of 7 competency certification schemes from Marketing, Accounting, Visual Communication Design (DKV), Fashion Design, Office Management (MPLB), Software and Game Development (PPLG), and Broadcasting. It also includes contact information, school location, and certification guidelines.
+
+**2. TEFA RPL Dashboard**
+
+An internal dashboard specifically designed to manage the finances of the Teaching Factory (TEFA) for the Software and Game Development (RPL) department. The dashboard supports two user roles, Admin and Treasurer, with financial data management and real-time updates.
+
+---
+
+## Key Features
 
 ### Landing Page
-- Informasi lengkap 7 skema sertifikasi dengan halaman detail masing-masing (`/skema/:slug`)
-- Peta lokasi sekolah via Google Maps embed
-- Halaman panduan sertifikasi
-- Desain responsif dengan Tailwind CSS v4
+- Detailed information on 7 certification schemes, each with its own detail page (`/skema/:slug`)
+- School location map embedded via Google Maps
+- Certification guidelines page
+- Responsive design using Tailwind CSS v4
 
-### Dashboard Manajemen
-- **Manajemen Siswa** — CRUD data siswa, status lunas/belum bayar otomatis dari data pembayaran
-- **Pembayaran** — Alur pembayaran 2 langkah (Tunai / Transfer / QRIS), verifikasi oleh Bendahara, notifikasi WhatsApp otomatis
-- **Jurnal** — Rekapitulasi pembayaran per siswa, dapat diunduh sebagai PNG
-- **Struk** — Cetak & simpan struk pembayaran sebagai PNG
-- **Grafik** — Visualisasi pendapatan, pengeluaran, dan pembayaran 6 bulan terakhir
-- **Histori** — Log aktivitas gabungan semua transaksi dengan ringkasan keuangan
-- **Real-time** — Notifikasi live via Socket.IO saat ada pembayaran baru atau verifikasi
+### Management Dashboard
+- **Student Management** — CRUD operations for student records, with paid/unpaid status automatically updated based on payment data
+- **Payments** — Two-step payment workflow (Cash / Bank Transfer / QRIS), Treasurer verification, and automatic WhatsApp notifications
+- **Journal** — Payment summaries for each student, exportable as PNG
+- **Receipts** — Print and save payment receipts as PNG
+- **Charts** — Visualizations of income, expenses, and payments over the last 6 months
+- **History** — Combined activity logs for all transactions, including financial summaries
+- **Real-time Updates** — Live notifications via Socket.IO when new payments are submitted or verified
 
 ---
 
 ## Tech Stack
 
-| Kategori | Teknologi |
+| Category | Technology |
 |---|---|
 | **Frontend** | React 19, Vite 8, React Router DOM 7 |
-| **Styling** | Tailwind CSS v4 (landing), Plain CSS (dashboard) |
+| **Styling** | Tailwind CSS v4 (landing page), Plain CSS (dashboard) |
 | **HTTP Client** | Axios |
 | **Real-time** | Socket.IO Client |
 | **Icons** | Lucide React |
 | **Export** | html2canvas (PNG) |
-| **Backend** | Express.js  |
-| **Database** | MySQL 8 (mysql2 pool) |
-| **Auth** | JWT (jsonwebtoken) + bcrypt |
-| **Email** | Nodemailer (reset password) |
+| **Backend** | Express.js |
+| **Database** | MySQL 8 (mysql2 connection pool) |
+| **Authentication** | JWT (jsonwebtoken) + bcrypt |
+| **Email** | Nodemailer (password reset) |
 | **Real-time Server** | Socket.IO Server |
-| **Deploy Frontend** | Vercel |
-| **Deploy Backend** | Railway |
-| **DB Lokal** | Docker + phpMyAdmin |
+| **Frontend Deployment** | Vercel |
+| **Backend Deployment** | Railway |
+| **Local Database** | Docker + phpMyAdmin |
 
 ---
 
-## Struktur Proyek
+## Project Structure
 
-```
+```text
 tefa rpl/
-├── tefa-rpl/               # Frontend React
+├── tefa-rpl/               # React frontend
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── dashboard/  # Komponen dashboard (modals, cards, charts)
-│   │   │   └── landing/    # Komponen landing page
+│   │   │   ├── dashboard/  # Dashboard components (modals, cards, charts)
+│   │   │   └── landing/    # Landing page components
 │   │   ├── contexts/
-│   │   │   ├── AuthContext.jsx     # JWT auth state
+│   │   │   ├── AuthContext.jsx     # JWT authentication state
 │   │   │   ├── DataContext.jsx     # Global data fetching
 │   │   │   └── SocketContext.jsx   # Socket.IO connection
 │   │   ├── pages/
-│   │   │   ├── dashboard/  # 12 halaman dashboard
+│   │   │   ├── dashboard/  # 12 dashboard pages
 │   │   │   └── landing/    # LandingPage, SkemaPage, PanduanPage
 │   │   ├── services/
 │   │   │   ├── api.js              # Axios instance + JWT interceptor
@@ -89,20 +89,20 @@ tefa rpl/
 │   ├── vite.config.js
 │   └── package.json
 │
-└── backend/                # Backend Express.js
+└── backend/                # Express.js backend
     ├── src/
     │   ├── config/
-    │   │   ├── db.js           # MySQL pool connection
-    │   │   └── schema.sql      # Full DB schema (8 tables)
+    │   │   ├── db.js           # MySQL connection pool
+    │   │   └── schema.sql      # Full database schema (8 tables)
     │   ├── controllers/
     │   │   ├── authController.js
     │   │   ├── pembayaranController.js  # Payment + transactional verification
     │   │   └── ...
     │   ├── middleware/
     │   │   ├── auth.js         # Bearer JWT verification
-    │   │   └── requireRole.js  # Role-based endpoint guard
+    │   │   └── requireRole.js  # Role-based endpoint protection
     │   ├── routes/
-    │   ├── migrate.js          # Auto-migration on startup
+    │   ├── migrate.js          # Automatic database migration on startup
     │   └── server.js           # Express + Socket.IO entry point
     ├── docker-compose.yml
     └── package.json
@@ -110,96 +110,99 @@ tefa rpl/
 
 ---
 
-## Memulai (Getting Started)
+## Getting Started
 
 ### Prerequisites
 
 - Node.js >= 18
-- MySQL 8 (atau Docker)
+- MySQL 8 (or Docker)
 - npm
 
-### 1. Clone Repository
+### 1. Clone the Repository
 
 ```bash
 git clone <repo-url>
 cd "tefa rpl"
 ```
 
-### 2. Setup Backend
+### 2. Set Up the Backend
 
 ```bash
 cd backend
 npm install
 ```
 
-
-### 3. Setup Frontend
+### 3. Set Up the Frontend
 
 ```bash
 cd tefa-rpl
 npm install
 ```
 
-Buat file `.env` di folder `tefa-rpl/`:
+Create a `.env` file in the `tefa-rpl/` directory:
 
 ```env
 VITE_API_URL=http://localhost:5000
 ```
 
-### 4. Jalankan Database Lokal (Docker)
+### 4. Start the Local Database (Docker)
 
 ```bash
 cd backend
 docker-compose up -d
 ```
 
-Ini akan menjalankan MySQL di port `3306` dan phpMyAdmin di `http://localhost:8080`.
+This starts MySQL on port `3306` and phpMyAdmin at `http://localhost:8080`.
 
-> **Catatan:** Backend melakukan auto-migration saat startup — semua tabel akan dibuat otomatis jika belum ada.
+> **Note:** The backend runs automatic migrations on startup. All tables are created automatically if they do not already exist.
 
-### 5. Jalankan Aplikasi
+### 5. Run the Application
 
 **Terminal 1 — Backend:**
+
 ```bash
 cd backend
 node src/server.js
 ```
 
 **Terminal 2 — Frontend:**
+
 ```bash
 cd tefa-rpl
 npm run dev
 ```
 
-Buka `http://localhost:5173` di browser.
+Open `http://localhost:5173` in your browser.
 
 ---
 
-## Halaman Dashboard
+## Dashboard Pages
 
-| Halaman | Path | Deskripsi |
+| Page | Path | Description |
 |---|---|---|
-| **Dashboard** | `/dashboard` | Ringkasan statistik — Admin melihat data siswa & order, Bendahara melihat keuangan + grafik 6 bulan |
-| **Siswa** | `/dashboard/siswa` | CRUD data siswa, status pembayaran otomatis |
-| **Produk** | `/dashboard/produk` | CRUD katalog produk/layanan |
-| **Penjualan** | `/dashboard/penjualan` | CRUD catatan penjualan, auto-generate ID (`PJL-001`) |
-| **Order** | `/dashboard/order` | Manajemen order (Proses / Selesai / Dibatalkan) |
-| **Pembayaran** | `/dashboard/pembayaran` | Alur pembayaran + verifikasi Bendahara, notifikasi WhatsApp |
-| **Jurnal** | `/dashboard/jurnal` | Rekap pembayaran per siswa, ekspor PNG |
-| **Grafik** | `/dashboard/grafik` | Bar chart pendapatan, pengeluaran, pembayaran |
-| **Pendapatan** | `/dashboard/pendapatan` | CRUD catatan pemasukan |
-| **Pengeluaran** | `/dashboard/pengeluaran` | CRUD catatan pengeluaran |
-| **Struk** | `/dashboard/struk` | Lihat & cetak struk pembayaran (PNG) |
-| **Histori** | `/dashboard/histori` | Log aktivitas semua transaksi + ringkasan keuangan |
+| **Dashboard** | `/dashboard` | Statistical overview — Admin sees student and order data, while the Treasurer sees financial summaries and 6-month charts |
+| **Students** | `/dashboard/siswa` | Student record management with automatic payment status updates |
+| **Products** | `/dashboard/produk` | Product and service catalog management |
+| **Sales** | `/dashboard/penjualan` | Sales record management with automatic ID generation (`PJL-001`) |
+| **Orders** | `/dashboard/order` | Order management (Processing / Completed / Cancelled) |
+| **Payments** | `/dashboard/pembayaran` | Payment workflow, Treasurer verification, and WhatsApp notifications |
+| **Journal** | `/dashboard/jurnal` | Payment summaries by student, with PNG export |
+| **Charts** | `/dashboard/grafik` | Bar charts for income, expenses, and payments |
+| **Income** | `/dashboard/pendapatan` | Income record management |
+| **Expenses** | `/dashboard/pengeluaran` | Expense record management |
+| **Receipts** | `/dashboard/struk` | View and print payment receipts as PNG |
+| **History** | `/dashboard/histori` | Transaction activity logs and financial summaries |
 
 ---
 
 ## Database
 
-Schema tersimpan di `backend/src/config/schema.sql` dengan 8 tabel:
+The database schema is defined in `backend/src/config/schema.sql` and consists of 8 tables:
 
 `users` · `siswa` · `produk` · `order` · `penjualan` · `pembayaran` · `pendapatan` · `pengeluaran`
 
-Auto-migration dijalankan via `backend/src/migrate.js` setiap kali server backend dinyalakan.
+Automatic migrations are handled by `backend/src/migrate.js` whenever the backend server starts.
 
-# Sekian,Terimakasih 
+---
+
+**Thank you for checking out this project!**
