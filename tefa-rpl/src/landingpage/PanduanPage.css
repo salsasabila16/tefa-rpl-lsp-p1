@@ -1,0 +1,278 @@
+/* ─────────────────────────────────────────
+   Panduan Page
+   ───────────────────────────────────────── */
+
+.panduan-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+/* ─── Hero ─── */
+
+.panduan-hero {
+  background: var(--color-primary);
+  padding: 56px 24px 52px;
+}
+
+.panduan-hero__inner {
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+.panduan-hero__title {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  line-height: 1.25;
+}
+
+.panduan-hero__desc {
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 680px;
+}
+
+/* ─── Body ─── */
+
+.panduan-body {
+  flex: 1;
+  background: #f5f7fa;
+  padding: 40px 24px 72px;
+}
+
+.panduan-body__inner {
+  max-width: 1180px;
+  margin-inline: auto;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+/* ─── Sidebar ─── */
+
+.panduan-sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  position: sticky;
+  top: calc(var(--navbar-h, 64px) + 20px);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px 16px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.panduan-sidebar__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-muted);
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.15s;
+  padding: 4px 0;
+}
+
+.panduan-sidebar__back:hover {
+  color: var(--color-primary);
+}
+
+.panduan-sidebar__label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin: 0 0 10px 4px;
+}
+
+.panduan-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.panduan-sidebar__item {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #64748b;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+  line-height: 1.4;
+}
+
+.panduan-sidebar__item:hover {
+  color: var(--color-navy, #0f172a);
+  background: #f1f5f9;
+}
+
+.panduan-sidebar__item--active {
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  background: #eff6ff;
+  font-weight: 600;
+}
+
+/* ─── Content ─── */
+
+.panduan-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Cards ─── */
+
+.panduan-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.panduan-card {
+  display: flex;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.15s;
+}
+
+.panduan-card:hover {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.panduan-card__num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+  min-width: 28px;
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.panduan-card__body {
+  flex: 1;
+}
+
+.panduan-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-navy, #0f172a);
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+
+.panduan-card__desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ─── Note ─── */
+
+.panduan-note {
+  margin-top: 20px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.panduan-note__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 8px;
+}
+
+.panduan-note__text {
+  font-size: 13.5px;
+  color: #1e40af;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 900px) {
+  .panduan-body__inner {
+    gap: 24px;
+  }
+
+  .panduan-sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .panduan-hero {
+    padding: 40px 20px 36px;
+  }
+
+  .panduan-body {
+    padding: 24px 16px 56px;
+  }
+
+  .panduan-body__inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .panduan-sidebar {
+    width: 100%;
+    position: static;
+    padding: 16px;
+  }
+
+  .panduan-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .panduan-sidebar__item {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 7px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  .panduan-sidebar__item--active {
+    border-left-color: transparent;
+    border-bottom-color: var(--color-primary);
+  }
+
+  .panduan-card {
+    padding: 16px 18px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panduan-sidebar__nav {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.logo__name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.3px;
+}
+
+.logo__school {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-muted);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.logo--light .logo__name {
+  color: #fff;
+}
+
+.logo--light .logo__school {
+  color: rgba(255, 255, 255, 0.55);
+}

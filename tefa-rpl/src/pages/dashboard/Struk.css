@@ -1,0 +1,295 @@
+/* ── Page heading ─────────────────────────────────────────────────────────── */
+
+.sk__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.sk__title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.3px;
+}
+
+.sk__subtitle {
+  margin-top: 4px;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+/* ── Stat cards ───────────────────────────────────────────────────────────── */
+
+.sk__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.skstat {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.skstat__left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skstat__label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.skstat__value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.skstat__desc {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.skstat__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ── Table card ───────────────────────────────────────────────────────────── */
+
+.sk-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.sk-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sk-card__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sk-card__desc {
+  margin-top: 3px;
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.sk-card__search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sk-card__search-icon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--color-muted);
+  pointer-events: none;
+}
+
+.sk-card__search {
+  height: 34px;
+  width: 260px;
+  padding: 0 var(--space-3) 0 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background: var(--color-white);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.sk-card__search:focus {
+  border-color: var(--color-primary);
+}
+
+.sk-card__search::placeholder {
+  color: var(--color-muted);
+}
+
+/* ── Table ────────────────────────────────────────────────────────────────── */
+
+.sk-table-wrap {
+  overflow-x: auto;
+}
+
+.sk-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sk-table__th {
+  padding: 10px var(--space-4);
+  background: #FAFBFC;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-muted);
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.sk-table__th--no     { width: 48px; }
+.sk-table__th--action { text-align: right; }
+
+.sk-table__row:not(:last-child) td {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.sk-table__row:hover td {
+  background-color: #FAFBFF;
+}
+
+.sk-table__td {
+  padding: 13px var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.sk-table__td--no     { color: var(--color-muted); font-size: var(--text-xs); }
+.sk-table__td--muted  { color: var(--color-muted); font-size: var(--text-xs); }
+.sk-table__td--amount { font-weight: 600; }
+.sk-table__td--action { text-align: right; }
+.sk-table__td--ket    { max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+
+.sk-table__empty {
+  padding: 48px var(--space-4);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+/* ── Struk no badge ───────────────────────────────────────────────────────── */
+
+.sk-struk-no {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 20px;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* ── Payer cell ───────────────────────────────────────────────────────────── */
+
+.sk-table__payer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sk-table__avatar {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-blue-light);
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sk-table__payer-name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* ── Print button ─────────────────────────────────────────────────────────── */
+
+.sk-btn-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.sk-btn-print:hover {
+  background-color: var(--color-blue-light);
+  border-color: var(--color-primary);
+}
+
+/* ── Footer ───────────────────────────────────────────────────────────────── */
+
+.sk-card__footer {
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.sk-card__count {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .sk__stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .sk__stats         { grid-template-columns: 1fr; }
+  .sk-card__header   { flex-direction: column; }
+  .sk-card__search   { width: 100%; }
+}

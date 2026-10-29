@@ -1,0 +1,29 @@
+/* Breakpoints: tablet 768px, mobile 480px */
+
+@media (max-width: 768px) {
+  :root {
+    --section-pad-y: 56px;
+    --text-4xl: 34px;
+    --text-3xl: 28px;
+    --text-2xl: 24px;
+    --text-xl: 20px;
+  }
+
+  .container {
+    padding-inline: var(--space-5);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-pad-y: 48px;
+    --text-4xl: 28px;
+    --text-3xl: 24px;
+    --text-2xl: 20px;
+    --text-xl: 18px;
+  }
+
+  .container {
+    padding-inline: var(--space-4);
+  }
+}

@@ -1,0 +1,393 @@
+/* ─────────────────────────────────────────
+   Skema Page
+   ───────────────────────────────────────── */
+
+.skema-page {
+  font-family: var(--font-sans);
+  color: #111827;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* ── Hero ── */
+.skema-hero {
+  background-color: var(--color-primary);
+  padding-block: 48px 44px;
+}
+
+.skema-hero__inner {
+  max-width: 1152px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.skema-hero__kode {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.skema-hero__title {
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.skema-hero__tagline {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+/* ── Main two-column ── */
+.skema-main {
+  padding-block: 48px 64px;
+}
+
+.skema-main__inner {
+  max-width: 1152px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  display: grid;
+  grid-template-columns: 1fr 348px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ── Card base ── */
+.skema-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.skema-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ── Visi & Misi inside card ── */
+.skema-vismis__section {
+  padding-block: 8px;
+}
+
+.skema-vismis__sub {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.skema-vismis__body {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.skema-vismis__divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-block: 24px;
+}
+
+.skema-vismis__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skema-vismis__item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.65;
+}
+
+.skema-vismis__bullet {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  margin-top: 7px;
+}
+
+/* ── Stat cards ── */
+.skema-statcard {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.skema-statcard:last-of-type {
+  margin-bottom: 0;
+}
+
+.skema-statcard__icon-wrap {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skema-statcard__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skema-statcard__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.skema-statcard__value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* ── Info Program card ── */
+.skema-info-card {
+  margin-top: 14px;
+}
+
+.skema-info-field {
+  padding-block: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.skema-info-field__divider {
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+.skema-info-field__label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.skema-info-field__value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.skema-back-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 13px 20px;
+  width: 100%;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.skema-back-link:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* ── Section inner (footer) ── */
+.skema-section-inner {
+  max-width: 1152px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* ── Footer ── */
+.skema-footer {
+  background-color: #111827;
+  padding-block: 52px 32px;
+}
+
+.skema-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+  align-items: start;
+}
+
+.skema-footer__brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.skema-footer__brand-lsp {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.skema-footer__brand-school {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.06em;
+}
+
+.skema-footer__desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.skema-footer__col-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 14px;
+}
+
+.skema-footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+}
+
+.skema-footer__list a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.skema-footer__list a:hover {
+  color: #ffffff;
+}
+
+.skema-footer__bottom {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.skema-footer__bottom p { margin: 0; }
+
+/* ── Not found ── */
+.skema-not-found {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.skema-not-found__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.skema-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .skema-main__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .skema-main__right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .skema-statcard {
+    margin-bottom: 0;
+  }
+
+  .skema-info-card {
+    margin-top: 0;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .skema-hero {
+    padding-block: 36px 32px;
+  }
+
+  .skema-card {
+    padding: 24px;
+  }
+
+  .skema-main__right {
+    grid-template-columns: 1fr;
+  }
+
+  .skema-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

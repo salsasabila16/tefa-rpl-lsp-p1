@@ -1,0 +1,62 @@
+.tx-table-wrap {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tx-table__th {
+  padding: var(--space-3) var(--space-5);
+  background-color: #FAFBFC;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.tx-table__row:not(:last-child) td {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.tx-table__row:hover td {
+  background-color: var(--color-bg);
+}
+
+.tx-table__td {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.tx-table__empty {
+  padding: var(--space-10);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px var(--space-2);
+  border-radius: 20px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.badge--success  { background-color: #DCFCE7; color: #15803D; }
+.badge--pending  { background-color: #FEF3C7; color: #B45309; }
+.badge--cancelled { background-color: #FEE2E2; color: #B91C1C; }
+.badge--belum-bayar { background-color: #FEE2E2; color: #B91C1C; }
+
+.tx-table__th--action { text-align: right; }
+.tx-table__td--action { text-align: right; white-space: nowrap; }
+
