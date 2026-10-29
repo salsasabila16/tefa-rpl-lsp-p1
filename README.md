@@ -1,6 +1,6 @@
 # TEFA RPL — LSP P1 
 
-Website LSP P1 SMKN 1 Banjar yang menyediakan informasi seputar sertifikasi kompetensi dari berbagai jurusan. Proyek ini juga dilengkapi dashboard khusus TEFA RPL untuk membantu pengelolaan keuangan secara digital.
+Website LSP P1  yang menyediakan informasi seputar sertifikasi kompetensi dari berbagai jurusan. Proyek ini juga dilengkapi dashboard khusus TEFA RPL untuk membantu pengelolaan keuangan secara digital.
 
 ---
 
