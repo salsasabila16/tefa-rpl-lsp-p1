@@ -1,19 +1,20 @@
-# TEFA RPL — LSP P1 SMKN 1 Banjar
+# TEFA RPL — LSP P1 
 
-Platform digital untuk unit **Teaching Factory** jurusan Rekayasa Perangkat Lunak (RPL) di **SMKN 1 Banjar**, sekaligus website resmi **LSP P1 SMKN 1 Banjar** untuk informasi sertifikasi kompetensi.
+Website LSP P1 SMKN 1 Banjar yang menyediakan informasi seputar sertifikasi kompetensi dari berbagai jurusan. Proyek ini juga dilengkapi dashboard khusus TEFA RPL untuk membantu pengelolaan keuangan secara digital.
 
 ---
 
 ## Tentang Proyek
 
-Aplikasi ini memiliki dua bagian utama:
+Proyek ini memiliki dua bagian utama:
 
-**1. Landing Page Publik** — Website informasi LSP P1 SMKN 1 Banjar yang dapat diakses siapa saja, menampilkan:
-- Profil, visi & misi, dan kebijakan mutu LSP
-- 7 skema sertifikasi kompetensi (Pemasaran, Akuntansi, DKV, Tata Busana, MPLB, PPLG, Broadcasting)
-- Lokasi sekolah, kontak, dan panduan sertifikasi
+**1. Website LSP P1**
 
-**2. Dashboard Manajemen (Protected)** — Sistem manajemen keuangan internal TEFA dengan fitur real-time, diakses oleh dua peran: **Admin** dan **Bendahara**.
+Menyediakan informasi seputar LSP P1 SMKN 1 Banjar, mulai dari profil lembaga, visi dan misi, kebijakan mutu, hingga informasi 7 skema sertifikasi kompetensi dari jurusan Pemasaran, Akuntansi, DKV, Tata Busana, MPLB, PPLG, dan Broadcasting. Tersedia juga informasi kontak, lokasi, dan panduan sertifikasi.
+
+**2. Dashboard TEFA RPL**
+
+Dashboard internal yang digunakan khusus untuk pengelolaan keuangan Teaching Factory (TEFA) jurusan Rekayasa Perangkat Lunak (RPL). Dashboard ini memiliki dua peran pengguna, yaitu Admin dan Bendahara, dengan fitur pengelolaan data keuangan serta pembaruan data secara real-time.
 
 ---
 
@@ -171,29 +172,6 @@ npm run dev
 ```
 
 Buka `http://localhost:5173` di browser.
-
----
-
-## Role & Akses
-
-Terdapat dua peran pengguna di dashboard:
-
-| Fitur | Admin | Bendahara |
-|---|:---:|:---:|
-| Dashboard | ✅ | ✅ |
-| Siswa | ✅ | ✅ |
-| Pembayaran | ✅ | ✅ |
-| Jurnal | ✅ | ✅ |
-| Struk | ✅ | ✅ |
-| Grafik | ✅ | ✅ |
-| Pendapatan | ✅ | ✅ |
-| Pengeluaran | ✅ | ✅ |
-| Histori | ✅ | ✅ |
-| Produk | ✅ | ✅ |
-| **Penjualan** | ✅ | ❌ |
-| **Order** | ✅ | ❌ |
-
-> Registrasi akun baru secara default menghasilkan peran **Bendahara**. Akun Admin dibuat secara manual.
 
 ---
 
